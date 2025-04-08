@@ -17,3 +17,12 @@ public class ConsumerEx {
         printList.accept(list);
     }
 }
+
+/*
+ * Consumer<T> 
+ * --> is a functional interface that represents an operation   that  takes a single input argument and returns no result.
+ * 
+ * "Hey, take this input and do something with it (but don’t return anything)."
+ * 
+ * 
+ */

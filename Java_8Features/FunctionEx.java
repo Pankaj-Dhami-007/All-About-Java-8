@@ -12,3 +12,16 @@ public class FunctionEx {
         System.out.println(res1);
     }
 }
+
+/*
+ * 
+ * What is Function<T, R>?
+In Java 8, Function<T, R> is a functional interface that represents a function which:
+
+1.takes one argument of type T (input)
+2.returns a result of type R (output)
+
+
+
+
+ */
