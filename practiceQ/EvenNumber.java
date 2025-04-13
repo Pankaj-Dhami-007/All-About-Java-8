@@ -8,5 +8,8 @@ public class EvenNumber {
        List<Integer> evenNumbers =  nums.stream().filter(n-> n%2 ==0).collect(Collectors.toList());
        System.out.println(evenNumbers);
 
+       nums.stream().filter(i-> i %2 == 0).forEach(System.out :: println);
+
+       
     }
 }
