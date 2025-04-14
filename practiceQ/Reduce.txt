@@ -1,0 +1,26 @@
+**************************The reduce Method in Java 8*******************
+The reduce method is a powerful operation introduced in Java 8 as part of the Stream API. It's used to combine elements of a stream into a single result by repeatedly applying a combining operation.
+
+Basic Concepts
+reduce performs a reduction on the elements of a stream using:
+
+1.An identity value (initial value)
+
+2.An accumulator function (how to combine elements)
+
+3.(Optional) A combiner function for parallel streams
+
+**-->>There are three main variants of reduce:
+___________1...Optional<T> reduce(BinaryOperator<T> accumulator)
+ _____________Performs a reduction without an initial value
+_________________Returns an Optional because the stream might be empty
+
+
+******---> 2. T reduce(T identity, BinaryOperator<T> accumulator)
+__________________Takes an identity value and accumulator function
+______________________Identity value is both the initial value and default result for empty ______________________streams
+
+*******----> 3. U reduce(U identity, BiFunction<U,? super T,U> accumulator, BinaryOperator<U> combiner)
+_______________________More complex version for parallel streams or when result type differs _______________________from stream elements
+
+___________________________Combiner is used to combine results from parallel streams

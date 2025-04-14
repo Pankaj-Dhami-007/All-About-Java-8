@@ -1,0 +1,33 @@
+1. UnaryOperator<T>
+A UnaryOperator is a special case of Function where the input and output types are the same.
+
+Definition: T apply(T t)
+
+Use case: Operations that take one argument and return a result of the same type
+
+Example: String manipulation, mathematical operations
+*<
+UnaryOperator<String> toUpperCase = str -> str.toUpperCase();
+String result = toUpperCase.apply("hello"); // "HELLO"
+
+UnaryOperator<Integer> square = x -> x * x;
+int squared = square.apply(5); // 25
+*>
+
+
+2. BinaryOperator<T>
+A BinaryOperator is a special case of BiFunction where all three types (two inputs and output) are the same.
+
+Definition: T apply(T t1, T t2)
+
+Use case: Operations that combine two values of the same type to produce another value of that type
+
+Example: Mathematical operations, string concatenation
+
+*<
+BinaryOperator<Integer> add = (a, b) -> a + b;
+int sum = add.apply(3, 5); // 8
+
+BinaryOperator<String> concat = (s1, s2) -> s1 + s2;
+String combined = concat.apply("Hello", "World"); // "HelloWorld"
+*>

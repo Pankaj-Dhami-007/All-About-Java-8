@@ -80,5 +80,6 @@ else{
 nums2.stream().map(x-> x*x).filter(x-> x> 50).forEach(System.out :: println);
 
 
+// reduce 
     }
 }
